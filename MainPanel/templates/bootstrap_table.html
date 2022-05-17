@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sunucu IP</th>
+        <th>Servis Adı</th>
+        <th>Sağlık Durumu</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in range(length) %}
+        <tr>
+          <td>127.0.0.1</td>
+          <td>{{ Service_Name[i] }}</td>
+          <td>{{ Status[i] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
