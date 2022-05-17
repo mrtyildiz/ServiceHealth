@@ -1,7 +1,8 @@
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
 import subprocess
 
-Services = ["apache2", "docker"]
-
+Services = ["apache2", "docker", "denemem"]
 
 def status():
     Dirct = {"id":[],"Service Name":[],"Status":[]}
@@ -11,12 +12,12 @@ def status():
             Dirct["id"].append(i)
             Dirct["Service Name"].append(Services[i])
             Dirct["Status"].append("Active")
-            print(Dirct)
+            #print(Dirct)
         else:
             Dirct["id"].append(i)
             Dirct["Service Name"].append(Services[i])
             Dirct["Status"].append("Not Active")
-            print(Dirct)
-        
+            #print(Dirct)
     print(type(Dirct))
     return Dirct
+#status()
